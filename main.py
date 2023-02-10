@@ -1,16 +1,61 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def my_tuple():
+    this_tuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango", "cherry", True, 40)
+    return this_tuple
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+my_tuple = my_tuple()
+print(my_tuple)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(len(my_tuple))
+
+#  Accessing a tuple
+print(my_tuple[1])
+
+print(my_tuple[2:5])
+
+# Updating tuples
+y = list(my_tuple)  # first. convert a tuple to a list
+y[1] = "kiwi"  # add to the list
+x = tuple(y)  # convert the list back to a tuple
+
+print(x)
+
+#  Adding to a tuple
+s = list(my_tuple)
+s.append("pineapple")
+my_tuple = tuple(s)
+
+print(my_tuple)
+
+#  Adding tuple to a tuple
+new_tuple = ("strawberry",)  # a new tuple
+my_tuple += new_tuple
+
+print(my_tuple)
+print()
+
+#  Removing from a tuple
+a_tuple = ("Chi", "Ben", "Dan")
+a = list(a_tuple)
+a.remove("Chi")
+a_tuple = tuple(a)
+
+print(a_tuple)
+
+# Looping through a tuple
+for x in my_tuple:
+    print(x)
+
+print()
+
+for i in range(len(my_tuple)):
+    print(my_tuple[i])
+
+print()
+
+#  Joining tuples
+tuple1 = ("a", "b", "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
